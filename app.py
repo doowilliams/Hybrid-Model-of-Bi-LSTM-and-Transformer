@@ -71,12 +71,12 @@ def preprocess_data(df):
 st.image('ss.jpg', caption='Durning Centre 39.02 kWh PV System')
 st.title("An improved photovoltaic power production forecasting using a hybrid model of Bi-LSTM and Transformer Attention Mechanism")
 
-st.write("Data Preview:", df.head())
+# st.write("Data Preview:", df.head())
 
 start_date = st.date_input('Start date', value=pd.to_datetime('2023-01-01'))
-start_time = st.time_input('Start time', value=pd.to_datetime('2023-01-01 00:00').time())
+start_time = st.time_input('Start time', value=pd.to_datetime('2023-01-01 00:00').time(), step=3600)
 end_date = st.date_input('End date', value=pd.to_datetime('2023-02-01'))
-end_time = st.time_input('End time', value=pd.to_datetime('2023-02-01 23:00').time())
+end_time = st.time_input('End time', value=pd.to_datetime('2023-02-01 23:00').time(), step=3600)
 
 start_datetime = pd.to_datetime(f"{start_date} {start_time}")
 end_datetime = pd.to_datetime(f"{end_date} {end_time}")
