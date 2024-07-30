@@ -103,7 +103,7 @@ else:
                 st.error("Failed to make predictions. Please check the input data and model.")
             else:
                 predictions = predictions.reshape(-1, 1)
-                adjustment_scale = 7.4  
+                adjustment_scale = 23.34  
                 predictions_adjusted = predictions * adjustment_scale
                 
                 historical_yield_data = np.random.rand(len(predictions_adjusted), 1)  
